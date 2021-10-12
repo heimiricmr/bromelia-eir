@@ -1,0 +1,18 @@
+api_version: v1
+name: EIR
+spec:
+  - applications:
+      - vendor_id: VENDOR_ID_3GPP
+        app_id: DIAMETER_APPLICATION_S13_S13
+    mode: Server
+    watchdog_timeout: 30
+    local:
+      ip_address: 0.0.0.0
+      hostname: eir.epc.mynetwork.com
+      realm: epc.mynetwork.com
+      port: 3870
+    peer:
+      ip_address: 0.0.0.0
+      hostname: mme.epc.mynetwork.com
+      realm: epc.mynetwork.com
+      port: 3868

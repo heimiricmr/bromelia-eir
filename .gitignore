@@ -1,0 +1,21 @@
+# Byte-compiled / optimized
+__pycache__
+*.py[cod]
+
+# VS code
+.vscode
+
+# Virtual Environment
+venv
+
+# Debugging Logs
+dsa*.log
+
+# Testing trace
+*.pcap
+
+# Help folder
+help
+
+# Miscelaneous folder
+misc
