@@ -55,7 +55,7 @@ app = Diameter(config=config)
 
 def create_ecr(index):
     imei = 123456789000000 + index
-    imsi = 724050000000000 + index
+    imsi = 999000000000000 + index
 
     ecr_avps = {
                  "session_id": app.config["LOCAL_NODE_HOSTNAME"],
@@ -115,7 +115,7 @@ def performance(total_num_msgs, num_transactions, time_frame):
     except ZeroDivisionError:
         _tps = None
 
-    print(f"\nexecuted time: {executed_time} seconds")
+    print(f"\nexecution time: {executed_time} seconds")
     print(f"tps: {_tps} msgs/seconds")
     
 
