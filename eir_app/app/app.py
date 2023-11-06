@@ -14,8 +14,8 @@ import logging
 from bromelia import Bromelia
 from bromelia.avps import *
 from bromelia.constants import *
-from bromelia.etsi_3gpp_s13.messages import MeIdentityCheckAnswer as ECA
-from bromelia.etsi_3gpp_s13.messages import MeIdentityCheckRequest as ECR
+from bromelia.lib.etsi_3gpp_s13.messages import MeIdentityCheckAnswer as ECA
+from bromelia.lib.etsi_3gpp_s13.messages import MeIdentityCheckRequest as ECR
 
 from config import *
 from constants import *
@@ -29,7 +29,7 @@ app = Bromelia(config_file=config_file)
 app.load_messages_into_application_id([ECA, ECR], DIAMETER_APPLICATION_S13_S13)
 
 #: Creating alias
-ECA = app.s13_s13.MICA
+ECA = app.s13.MICA
 
 @app.route(application_id=DIAMETER_APPLICATION_S13_S13, command_code=EC_MESSAGE)
 def ecr(request):
