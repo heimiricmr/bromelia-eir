@@ -17,10 +17,10 @@ import sys
 from bromelia import Diameter
 from bromelia.avps import *
 from bromelia.constants import *
-from bromelia.etsi_3gpp_s13.avps import *
-from bromelia.etsi_3gpp_s13.messages import MeIdentityCheckAnswer as ECA
-from bromelia.etsi_3gpp_s13.messages import MeIdentityCheckRequest as ECR
-from bromelia.etsi_3gpp_s6a_s6d.avps import *
+from bromelia.lib.etsi_3gpp_s13.avps import *
+from bromelia.lib.etsi_3gpp_s13.messages import MeIdentityCheckAnswer as ECA
+from bromelia.lib.etsi_3gpp_s13.messages import MeIdentityCheckRequest as ECR
+from bromelia.lib.etsi_3gpp_s6a.avps import *
 
 LOCAL_HOSTNAME = "mme.epc.mynetwork.com"
 LOCAL_DOMAIN = "epc.mynetwork.com"
