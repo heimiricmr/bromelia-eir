@@ -1,0 +1,5 @@
+bromelia==0.3.1
+greenlet==3.0.1
+psycopg2-binary==2.9.2
+PyYAML==6.0.1
+SQLAlchemy==1.4.27

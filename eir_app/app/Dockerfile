@@ -6,19 +6,17 @@ WORKDIR /home/eir
 
 RUN apt-get update && apt-get install -y \
   libpq-dev \
-  python-dev \
+  python-dev-is-python3 \
   && rm -rf /var/lib/apt/lists/*
 
+COPY app.py config.py constants.py entrypoint.py models.py utils.py ./
+COPY boot.sh config.yaml requirements.txt ./
+
 RUN python -m venv venv
-RUN venv/bin/pip install --upgrade pip
-RUN venv/bin/pip install psycopg2-binary==2.9.1
-RUN venv/bin/pip install pyyaml==5.4.1
-RUN venv/bin/pip install sqlalchemy==1.4.25
-RUN venv/bin/pip install bromelia==0.2.0
+RUN venv/bin/pip install --upgrade pip setuptools wheel
+RUN venv/bin/pip install -r requirements.txt
 
-COPY * ./
 RUN chmod +x boot.sh
-
 RUN chown -R eir:eir ./
 USER eir
 
